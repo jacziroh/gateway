@@ -1,0 +1,9 @@
+{
+  "sentence-transformers/all-MiniLM-L6-v2": ["http://127.0.0.1:8080"],
+  "saubhagya122k4/bert-sentiment-analysis": ["http://127.0.0.1:8080"],
+  "google/flan-t5-large": ["http://127.0.0.1:8080"],
+  "openai/whisper-tiny": ["http://127.0.0.1:8080"],
+  "google/vit-base-patch16-224": ["http://127.0.0.1:8080"],
+  "Qwen/Qwen2.5-1.5B-Instruct": ["http://34.66.206.115/api/v1/"],
+  "bert-base-uncased": ["http://127.0.0.1:8080"]
+}

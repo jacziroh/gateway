@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Follow instructions strictly."
+    },
+    {
+      "role": "user",
+      "content": "Solve for x: 2x + 5 = 17. Show the steps."
+    }
+  ],
+  "max_completion_tokens": 1024,
+  "stream": false,
+  "stream_options": {
+    "include_usage": false
+  },
+  "temperature": 0.7,
+  "top_p": 1,
+  "n": 1,
+  "store": false
+}

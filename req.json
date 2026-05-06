@@ -1,0 +1,40 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "messages": [
+    { "role": "user", "content": "square of 23" }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "square",
+        "description": "Compute the square of a number and return it.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "n": { "type": "integer" }
+          },
+          "required": ["n"]
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "square_result",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "n": { "type": "integer" },
+          "square": { "type": "integer" }
+        },
+        "required": ["n", "square"],
+        "additionalProperties": false
+      },
+      "strict": true
+    }
+  },
+  "temperature": 0.0
+}

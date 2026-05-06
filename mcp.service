@@ -1,0 +1,26 @@
+[Unit]
+Description=Kai Tools - MCP Service
+After=network.target
+
+[Service]
+Type=simple
+User=kaihero
+WorkingDirectory=/opt/kai/kai-tools
+ExecStart=/opt/kai/kai-tools/start-mcp-svc.sh
+
+Restart=always
+RestartSec=2
+
+
+Environment=DEMO_LOG_LEVEL=INFO
+Environment=MCP_HOST=0.0.0.0
+Environment=MCP_PORT=9200
+Environment=LOG_FILE=/var/log/kai/mcp.log
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+

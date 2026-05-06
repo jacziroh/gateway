@@ -1,0 +1,8 @@
+{
+  "square": "square.py",
+  "sort_array": "sort_array.py",
+  "add_3_numbers": "add_3_numbers.py",
+  "get_customer": "get_customer.py",
+  "create_ticket": "create_ticket.py",
+  "score_lead": "score_lead.py"
+}

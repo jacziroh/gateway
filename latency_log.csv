@@ -1,0 +1,4 @@
+timestamp,req_id,tool,model,mcp_list_ms,llm1_ms,mcp_exec_ms,llm2_ms,total_ms
+2026-03-30 13:58:03,req_67e15a9c2998,score_lead,Qwen/Qwen2.5-1.5B-Instruct,14.8,1640.3,5.4,1285.6,2951.9
+2026-03-30 14:51:37,req_140448093616,square,Qwen/Qwen2.5-1.5B-Instruct,3.6,1121.6,3.7,1199.8,2329.0
+2026-04-21 15:50:19,req_28c9e860fe07,get_customer,Qwen/Qwen2.5-1.5B-Instruct,31.4,1367.3,13.3,2594.1,4006.7

@@ -1,0 +1,57 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": "New lead: Priya Sharma from TradeCorp, ₹2.5Cr annual revenue. Score her."
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "score_lead",
+        "description": "Score lead quality based on revenue",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "company": { "type": "string" },
+            "revenue_estimate": { "type": "number" }
+          },
+          "required": ["name", "company", "revenue_estimate"],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "lead_score_result",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "result_type": { "type": "string" },
+          "summary": { "type": "string" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "lead_name": { "type": "string" },
+              "company": { "type": "string" },
+              "score": { "type": "number" },
+              "recommendation": { "type": "string" }
+            },
+            "required": ["lead_name", "company", "score", "recommendation"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["result_type", "summary", "data"],
+        "additionalProperties": false
+      },
+      "strict": true
+    }
+  },
+  "temperature": 0.0
+}
